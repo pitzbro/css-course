@@ -50,6 +50,30 @@ section {
 
 .timeline .timeline__event {
     height: 60px;
+    position: relative;
+}
+
+.timeline .timeline__event:before {
+    content: attr(data-hour);
+    display: block;
+    position: absolute;
+    width: 130px;
+    left: -180px;
+    text-align: end;
+}
+
+.timeline .timeline__event:after {
+    content: "";
+    background: #fff;
+    width: 9px;
+    height: 9px;
+    border: 1px solid #14b876;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: -26px;
+    box-shadow: 0 0 0 2px white;
 }
 
 .timeline .timeline__day {
