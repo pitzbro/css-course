@@ -79,3 +79,18 @@ section {
 .timeline .timeline__day {
     padding: 0 0 0 20px;
 }
+
+/*-------Profile---------*/
+
+.profile__details {
+    padding: 0 0 0 65px;
+    background-image: url(../svg/profile.svg);
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    background-position: left center;
+}
+
+.profile__name {
+    font-size: 1.125rem;
+    color: #333;
+}
