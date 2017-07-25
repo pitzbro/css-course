@@ -1,3 +1,57 @@
-ul, body {
-    background: #ce8618;
+
+
+/*-----Global--------*/
+
+@font-face {
+    font-family: openRegular;
+    src: url(../fonts/open/OpenSans-Regular.ttf);
+}
+
+* {
+    box-sizing: border-box;  
+}
+
+body {
+    font-family: 'openRegular', sans-serif;
+    margin: 0;
+    color: #666;
+}
+
+h2 {
+    font-size: 1.142rem;
+    color: #333;
+}
+
+strong {
+    color: #333;
+    font-weight: normal;
+}
+
+/*------Helpers---------*/
+
+.clean-list {
+    list-style: none;
+}
+/*----Layout-----*/
+
+section {
+    border: 1px solid #ddd;
+    width: 400px;
+    padding: 20px;
+    margin: 20px;
+}
+
+/*-----Timeline--------*/
+
+.timeline {
+    border-left: 1px solid #b7b7b7;
+    margin: 0 0 0 130px;
+}
+
+.timeline .timeline__event {
+    height: 60px;
+}
+
+.timeline .timeline__day {
+    padding: 0 0 0 20px;
 }
