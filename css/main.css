@@ -72,7 +72,7 @@ button.btn-link:hover {
     visibility: hidden;
 
     opacity: 0;
-    transition: opacity 2s;
+    transition: opacity 1s;
 }
 
 .modal-open .modal-bg {
@@ -87,7 +87,29 @@ button.btn-link:hover {
     border-radius: 5px;
     text-align: center;
     padding: 20px;
+    /*transition: all 2s;*/
+    /*opacity: 0;*/
+    /*transform: rotate(30deg);*/
 }
+
+.modal-open .modal {
+    /*transform: translate(0, -30px);*/
+    /*transform: rotate(0deg);
+    opacity: 1;*/
+    animation: modalin 4s linear infinite;
+}
+
+/*---animations----*/
+
+@keyframes modalin {
+    0% { transform: translate(0, 0)}
+    25% { transform: translate(-30px, 30px)}
+    50% { transform: translate(-30px, -30px)}
+    75% { transform: translate(30px, -30px)}
+    100% { transform: translate(0, 0)}
+}
+
+
 
 /*------Helpers---------*/
 
@@ -216,7 +238,7 @@ section.latest-activities {
 /*--------Circles---------*/
 
 .c100 .bar {
-    transition: all 2s;
+    transition: all 6s;
 }
 
 .c100 {
