@@ -11,6 +11,10 @@
 
 <body>
 
+    <div class="modal-bg" onclick="openModal()">
+        <div class="modal">This is the modal</div>
+    </div>
+
     <div class="container container-timeline flex flex-wrap flex-column space-between align-between">
 
         <section class="Last-verified progress medium-block">
@@ -28,9 +32,9 @@
                 </div>
             </div>
 
-            <div class="section-controls">
-                <button onclick="openModal()">open modal</button>
-                <button onclick="openModal()">open modal</button>
+            <div class="section-controls flex">
+                <button onclick="openModal()" class="btn-link">open modal</button>
+                <button onclick="openModal()" class="btn-link">open modal</button>
             </div>
 
         </section>
@@ -116,7 +120,7 @@
             </div>
         </section>
 
-        <section class="profile">
+        <section class="profile small-block">
             <h2>Last Access</h2>
             <div class="profile__details">
                 <div class="profile__name">Boris Rodnik</div>
@@ -131,7 +135,7 @@
 
         <script>
             function openModal() {
-                document.querySelector('body').classList.toggle("modal");
+                document.querySelector('body').classList.toggle("modal-open");
             }
         </script>
 
