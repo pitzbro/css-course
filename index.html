@@ -11,91 +11,129 @@
 
 <body>
 
-    <section class="Last-verified progress">
-        <h2>Last verified</h2>
-        <div class="progress__circle c100 p10 green">
-            <span>10</span>
-            <div class="slice">
-                <div class="bar"></div>
-                <div class="fill"></div>
+    <div class="container container-timeline flex flex-wrap flex-column space-between align-between">
+
+        <section class="Last-verified progress medium-block">
+            <h2>Last verified</h2>
+            <div class="flex">
+                <div class="progress__circle c100 p10 green">
+                    <span>10</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+                <div class="progress__details">
+                    Changed by <br> Andrey Singalovich <br> 28.12.16 4:45 PM
+                </div>
             </div>
+
+            <div class="section-controls">
+                <button onclick="openModal()">open modal</button>
+                <button onclick="openModal()">open modal</button>
+            </div>
+
+        </section>
+
+        <section class="Last-verified progress medium-block">
+            <h2>Last verified</h2>
+            <div class="flex">
+                <div class="progress__circle c100 p10 green">
+                    <span>10</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                </div>
+                <div class="progress__details">
+                    Changed by <br> Andrey Singalovich <br> 28.12.16 4:45 PM
+                </div>
+            </div>
+
+            <div class="section-controls">
+                <button onclick="openModal()">open modal</button>
+                <button onclick="openModal()">open modal</button>
+            </div>
+
+        </section>
+
+        <section class="latest-activities full-height">
+
+            <h2>Lastest Activities</h2>
+
+            <div class="timeline">
+
+                <ul class="timeline__day clean-list" data-date="Today 07.12">
+                    <li class="timeline__event" data-hour="11:02:45">
+                        <p><strong>Admin</strong> - Add file category Device Type</p>
+                    </li>
+                    <li class="timeline__event" data-hour="2:30 - 4:00pm">
+                        <p><strong>Weak</strong> - Get file request faild</p>
+                    </li>
+                    <li class="timeline__event" data-hour="5:00 - 8:00pm">
+                        <p><strong>PasswordManager... </strong> - Add file c... Lorem Ipsum is simply dummy...</p>
+                    </li>
+                    <li class="timeline__event" data-hour="8:30 - 9:30pm">
+                        <p><strong>Admin</strong> - Add file category Device Type</p>
+                    </li>
+                </ul>
+
+                <ul class="timeline__day clean-list" data-date="Last week 01.12">
+                    <li class="timeline__event" data-hour="11:02:45">
+                        <p><strong>Admin</strong> - Add file category Device Type</p>
+                    </li>
+                    <li class="timeline__event" data-hour="2:30 - 4:00pm">
+                        <p><strong>Weak</strong> - Get file request faild</p>
+                    </li>
+                    <li class="timeline__event" data-hour="2:30 - 4:00pm">
+                        <p><strong>Weak</strong> - Get file request faild</p>
+                    </li>
+                </ul>
+
+        </section>
+
+        <section class="profile small-block">
+            <h2>Last Access</h2>
+
+            <div class="profile__details">
+                <div class="profile__name">Boris Rodnik</div>
+                <p>
+                    5 days ago on 28.12.16 , 4:45
+                    <br> Lorem ipsum dolor sit
+                </p>
+            </div>
+
+        </section>
+
+        <section class="profile small-block">
+            <h2>Last Access</h2>
+            <div class="profile__details">
+                <div class="profile__name">Boris Rodnik</div>
+                <p>
+                    5 days ago on 28.12.16 , 4:45
+                    <br> Lorem ipsum dolor sit
+                </p>
+            </div>
+        </section>
+
+        <section class="profile">
+            <h2>Last Access</h2>
+            <div class="profile__details">
+                <div class="profile__name">Boris Rodnik</div>
+                <p>
+                    5 days ago on 28.12.16 , 4:45
+                    <br> Lorem ipsum dolor sit
+                </p>
+            </div>
+        </section>
+
         </div>
-        </div class="progress__details">
-            Changed by <br> 
-            Andrey Singalovich <br> 
-            28.12.16 4:45 PM
-        </div>
 
-    </section>
-
-
-    <section class="latest-activities">
-
-        <h2>Lastest Activities</h2>
-
-        <div class="timeline">
-
-            <ul class="timeline__day clean-list" data-date="Today 07.12">
-                <li class="timeline__event" data-hour="11:02:45">
-                    <p><strong>Admin</strong> - Add file category Device Type</p>
-                </li>
-                <li class="timeline__event" data-hour="2:30 - 4:00pm">
-                    <p><strong>Weak</strong> - Get file request faild</p>
-                </li>
-                <li class="timeline__event" data-hour="5:00 - 8:00pm">
-                    <p><strong>PasswordManager... </strong> - Add file c... Lorem Ipsum is simply dummy...</p>
-                </li>
-                <li class="timeline__event" data-hour="8:30 - 9:30pm">
-                    <p><strong>Admin</strong> - Add file category Device Type</p>
-                </li>
-            </ul>
-
-            <ul class="timeline__day clean-list" data-date="Last week 01.12">
-                <li class="timeline__event" data-hour="11:02:45">
-                    <p><strong>Admin</strong> - Add file category Device Type</p>
-                </li>
-                <li class="timeline__event" data-hour="2:30 - 4:00pm">
-                    <p><strong>Weak</strong> - Get file request faild</p>
-                </li>
-            </ul>
-
-    </section>
-
-    <section class="profile">
-        <h2>Last Access</h2>
-
-        <div class="profile__details">
-            <div class="profile__name">Boris Rodnik</div>
-            <p>
-                5 days ago on 28.12.16 , 4:45
-                <br> Lorem ipsum dolor sit
-            </p>
-        </div>
-
-    </section>
-
-
-    <section class="profile">
-        <h2>Last Access</h2>
-        <div class="profile__details">
-            <div class="profile__name">Boris Rodnik</div>
-            <p>
-                5 days ago on 28.12.16 , 4:45
-                <br> Lorem ipsum dolor sit
-            </p>
-        </div>
-    </section>
-
-    <section class="profile">
-        <h2>Last Access</h2>
-        <div class="profile__details">
-            <div class="profile__name">Boris Rodnik</div>
-            <p>
-                5 days ago on 28.12.16 , 4:45
-                <br> Lorem ipsum dolor sit
-            </p>
-        </div>
-    </section>
+        <script>
+            function openModal() {
+                document.querySelector('body').classList.toggle("modal");
+            }
+        </script>
 
 </body>
 
