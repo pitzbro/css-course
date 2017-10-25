@@ -7,6 +7,7 @@
     <!--CSS-->
     <link href="css/circle.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
+    <link href="css/timeline.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -15,7 +16,7 @@
         <div class="modal">This is the modal</div>
     </div>
 
-    <div class="container container-timeline">
+    <div class="container container-timeline flex column wrap space-between align-between">
 
         <section class="Last-verified progress medium-block">
             <h2>Last verified</h2>
@@ -32,7 +33,7 @@
                 </div>
             </div>
 
-            <div class="section-controls">
+            <div class="section-controls flex">
                 <button onclick="openModal()" class="btn-link">open modal</button>
                 <button onclick="openModal()" class="btn-link">open modal</button>
             </div>
@@ -56,12 +57,12 @@
 
             <div class="section-controls">
                 <button onclick="openModal()">open modal</button>
-                <button onclick="openModal()">open modal</button>
+                <!--<button onclick="openModal()">open modal</button>-->
             </div>
 
         </section>
 
-        <section class="latest-activities full-height">
+        <section class="latest-activities full-height large-block">
 
             <h2>Lastest Activities</h2>
 
@@ -134,9 +135,11 @@
         </div>
 
         <script>
+
             function openModal() {
                 document.querySelector('body').classList.toggle("modal-open");
             }
+
         </script>
 
 </body>

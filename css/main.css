@@ -1,0 +1,269 @@
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px #ddd;
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px #ddd;
+	background-color: #ddd;
+}
+
+/*--- Fonts --*/
+
+@font-face {
+    font-family: openSans;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: openSansBold;
+    src: url(../fonts/OpenSans-Bold.ttf);
+}
+
+
+/*--- Globals --*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+   font-size: 14px;
+   color: #898989;
+   font-family: 'openSans', sans-serif;
+}
+
+body {
+margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 10px 0;
+}
+
+h2 {
+    font-size: 1.143rem;
+    font-weight: normal;
+    color: #3d4245;
+    margin: 0 0 10px 0; 
+}
+
+p {
+    margin: 0 0 20px 0;
+}
+
+button {
+    cursor: pointer;
+    color: inherit;
+    background: transparent;
+    padding: 0;
+    border: none;  
+
+    transition: all 1.3s;
+}
+
+button:hover {
+    background: #ddd;
+
+    transition: all 0.3s;
+}
+
+button:active {
+    background: #000;
+}
+
+button:focus {
+    outline: none;
+}
+
+strong {
+    font-family: 'openSansBold';
+}
+section {
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 20px 15px;
+}
+
+/*----Layout----*/
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/*----Timeline Component----*/
+
+.timeline {
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    height: 400px;
+    padding: 30px 0;
+}
+
+.container-timeline {
+    height: 545px;
+}
+
+.container-timeline .small-block {
+    flex: 1 0 150px;
+    max-height: calc(33.333% - 15px );
+}
+
+.container-timeline .medium-block {
+    flex: 1 0 240px;
+    max-height: calc(50% - 15px );
+}
+
+.container-timeline .large-block {
+    
+}
+
+.container-timeline section {
+    overflow: hidden;
+    width: calc(33.333% - 15px );
+    position: relative;
+}
+
+.profile__details {
+    padding-left: 65px;
+    background-image: url('../svg/profile.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 36px;
+}
+
+.profile__name {
+    color: #2a3034;
+    font-size: 1.714rem;
+}
+
+.section-controls {
+    border-top: 1px solid #ddd;
+    position: absolute;
+    height: 40px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    display: flex;
+}
+
+.section-controls > * {
+    flex-grow: 1;
+}
+
+.container-timeline section button {
+    border-right: 1px solid #ddd;
+}
+
+.container-timeline section button:last-child {
+    border: none;
+}
+
+/*----------MODAL-------*/
+
+.modal-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+
+    transition: opacity 1s, visibility 0s 1s;
+}
+
+.modal-open .modal-bg {
+    transition: opacity 1s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    cursor: default;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 20px 14px rgba(0, 0, 0, 0.24);
+    transform: translate(0, -50px);
+
+    transition: all .5s;
+}
+
+.modal-open .modal {
+    transform: translate(0, 0);
+    animation: modal 3s ease-in-out infinite alternate;
+}
+
+/*----Helpers----*/
+
+
+.full-height {
+    height: 100%;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+.flex.wrap {
+    flex-wrap: wrap;
+}
+
+.flex.space-around {
+    justify-content: space-around;
+}
+
+.flex.space-between {
+    justify-content: space-between;
+}
+
+.flex.align-between {
+    align-content: space-between;
+}
+
+.flex .full-height {
+    flex-basis: 100%;
+}
+
+/*-----Animations-----*/
+
+@keyframes modal {
+    0% { transform: rotate(0deg) rotateX(0deg); }
+    50% { transform: rotate(50deg) }
+    75% {  transform: rotate(30deg) rotateX(150deg) rotateY(150deg); 
+    }
+    100% { transform: rotate(0deg) rotateX(0deg); }
+}
+
